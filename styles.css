@@ -1,0 +1,235 @@
+/* Importando Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background: #0d1117;
+}
+
+header {
+    background: #161b22;
+    border-bottom: 1px solid #21262d;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0d1117, #161b22);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Clase para texto en negro fuerte */
+.strong-black {
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero .cta .btn {
+    background: #238636;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.hero .cta .btn:hover {
+    background: #2ea043;
+}
+
+section {
+    padding: 60px 0;
+    background: #0d1117;
+}
+
+section:nth-child(even) {
+    background: #161b22;
+}
+
+section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about {
+    color: #e0e0e0; /* Color del texto en la sección About */
+}
+
+.objectives ul {
+    list-style: none;
+    padding: 0;
+}
+
+.objectives ul li {
+    background: url('checkmark.png') no-repeat left center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #e0e0e0; /* Color del texto en la sección Objectives */
+}
+
+.buy ol {
+    padding-left: 20px;
+    font-weight: 600;
+    color: #e0e0e0; /* Color del texto en la sección Buy */
+}
+
+.donate form,
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.donate form input,
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+}
+
+.donate form button,
+.contact form button {
+    padding: 15px;
+    background: #238636;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.donate form button:hover,
+.contact form button:hover {
+    background: #2ea043;
+}
+
+.donate ul {
+    list-style: none;
+    padding: 0;
+}
+
+.donate ul li {
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #238636;
+    margin-right: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #2ea043;
+}
+
+footer {
+    background: #161b22;
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #238636;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 0;
+    background: #238636;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2ea043;
+}
