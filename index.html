@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BerylAidCoin - Helping Hurricane Beryl Victims</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -41,7 +42,7 @@
         <div class="container">
             <h2>About BerylAidCoin</h2>
             <p>BerylAidCoin is a compassionate and impactful token designed to support those affected by Hurricane Beryl.</p>
-            <img src="Beryl-Coin.png" alt="BerylAidCoin">
+            <img src="token-image.png" alt="BerylAidCoin">
         </div>
     </section>
 
@@ -85,7 +86,8 @@
                 <li>Select the amount of BERYL you want to buy.</li>
                 <li>Confirm the transaction.</li>
             </ol>
-            <a href="https://exchange-link.com" class="btn">Buy Now</a>
+            <button id="connect-button" class="btn">Connect Wallet</button>
+            <button id="buy-button" class="btn" disabled>Buy BERYL</button>
         </div>
     </section>
 
@@ -134,5 +136,40 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        let walletConnected = false;
+
+        // Función para conectar la wallet de Phantom
+        async function connectWallet() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const response = await window.solana.connect();
+                    const publicKey = response.publicKey.toString();
+                    alert('Connected account: ' + publicKey);
+                    walletConnected = true;
+                    document.getElementById('buy-button').disabled = false;
+                } catch (error) {
+                    console.error('User rejected the request.');
+                }
+            } else {
+                alert('Phantom wallet is not installed. Please install Phantom and try again.');
+            }
+        }
+
+        // Función para comprar tokens
+        async function buyToken() {
+            if (walletConnected) {
+                alert('Buying BERYL is not implemented yet.');
+                // Aquí puedes agregar la lógica para comprar tokens
+                // Por ejemplo, interactuar con tu contrato inteligente en Solana
+            } else {
+                alert('Please connect your wallet first.');
+            }
+        }
+
+        document.getElementById('connect-button').addEventListener('click', connectWallet);
+        document.getElementById('buy-button').addEventListener('click', buyToken);
+    </script>
 </body>
 </html>
